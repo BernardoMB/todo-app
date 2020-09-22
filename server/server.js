@@ -14,7 +14,7 @@ const app = express();
 app.use(bodyParser.json());
 
 // GET /
-app.get('', (request, response) => {
+app.get('/', (request, response) => {
     return response.send({
         message: 'Todo app v1'
     });
