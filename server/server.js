@@ -3,9 +3,9 @@ const bodyParser = require('body-parser');
 const { ObjectID } = require('mongodb');
 
 // Require database connection and models
-/* const { mongoose } = require('./db/mongoose');
+const { mongoose } = require('./db/mongoose');
 const {Todo} = require('./models/todo');
-const {User} = require('./models/user'); */
+const {User} = require('./models/user');
 
 const PORT = process.env.PORT || 3000;
 const app = express();
@@ -23,7 +23,7 @@ app.get('/', (request, response) => {
 // CRUD Operations:
 // Create Read Update Delete
 
-/* // POST /todos. Create all todos.
+// POST /todos. Create all todos.
 app.post('/todos', (request, response) => {
     console.log('Request body', request.body);
     const todo = new Todo({
@@ -91,7 +91,7 @@ app.delete('/todos/:id', (request, response) => {
     }).catch((err) => {
         response.status(400).send(err);
     });
-}); */
+});
 
 app.listen(PORT, () => {
     console.log(`App listening on port ${PORT}`);
@@ -100,6 +100,6 @@ app.listen(PORT, () => {
 // Export the app
 module.exports = {
     app,
-    /* Todo,
-    User */
+    Todo,
+    User
 };
