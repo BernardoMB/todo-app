@@ -100,6 +100,6 @@ app.listen(PORT, () => {
 // Export the app
 module.exports = {
     app,
-    Todo,
-    User
+    /* Todo,
+    User */
 };
