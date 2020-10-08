@@ -1,5 +1,9 @@
 const mongoose = require('mongoose');
 const Todo = mongoose.model('Todo', {
+    creator: {
+        type: mongoose.Schema.Types.ObjectId,
+        required: true
+    }, 
     title: {
         type: String,
         required: true,
